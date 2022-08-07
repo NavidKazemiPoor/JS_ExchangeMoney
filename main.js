@@ -25,10 +25,10 @@ const changeSelect = () => {
 currencyOne.addEventListener("change", changeSelect);
 currencyTwo.addEventListener('change',changeSelect);
 btnSwap.addEventListener('click',()=>{
-    let temp = 0;
-    temp = amountOne.value;
-    amountOne.value = amountTwo.value;
-    amountTwo.value = temp;
+  let temp = currencyTwo.value;
+  currencyTwo.value =  currencyOne.value;
+  currencyOne.value = temp;
+    fetchData();
 });
 
 amountOne.addEventListener("input", () => {
